@@ -36,11 +36,16 @@ jobs:
     name: Despliegue Continuo
     runs-on: ubuntu-latest
     needs: ci
+    enviroment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url} }
 
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
 
       - name: Simulación de despliegue
+        id: deployment
+        uses: actions/deploy-pages@v4
         run: echo "Artefactos listos para el despliegue en el entorno de Staging"
 
