@@ -25,7 +25,7 @@ jobs:
 
       - name: Verificar existencia de styles.css
         run: |
-          if [ -f "styles.css" ]; then
+          if [ -f "styles/styles.css" ]; then
             echo "✅ styles.css existe"
           else
             echo "❌ styles.css no existe"
