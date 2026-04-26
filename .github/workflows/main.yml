@@ -16,7 +16,7 @@ jobs:
 
       - name: Verificar existencia de home.html
         run: |
-          if [ -f "home.html" ]; then
+          if [ -f "pages/home.html" ]; then
             echo "✅ home.html existe"
           else
             echo "❌ home.html no existe"
